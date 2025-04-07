@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Currency Converter | Yemen Exchange Rates",
   description:
-    "A modern and responsive currency converter app for converting between Yemeni Rial, US Dollar, and Saudi Riyal with fixed exchange rates.",
+    "A modern and responsive currency converter app (Rania) for converting between Yemeni Rial, US Dollar, and Saudi Riyal with fixed exchange rates.",
   keywords: [
     "currency converter",
     "Yemen exchange rates",
