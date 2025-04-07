@@ -9,15 +9,19 @@ const CurrencyConverter = () => {
   const [toCurrency, setToCurrency] = useState("USD");
 
   const rates = {
-    YER: { USD: 1 / 536, SAR: 1 / 140 },
-    USD: { YER: 536, SAR: 3.75 },
-    SAR: { YER: 140, USD: 1 / 3.75 },
+    YER: { USD: 1 / 536, SAR: 1 / 140, EUR: 1 / 600, AED: 1 / 150 },
+    USD: { YER: 536, SAR: 3.75, EUR: 0.85, AED: 3.67 },
+    SAR: { YER: 140, USD: 1 / 3.75, EUR: 0.23, AED: 0.98 },
+    EUR: { YER: 600, USD: 1 / 0.85, SAR: 4.34, AED: 4.31 },
+    AED: { YER: 150, USD: 1 / 3.67, SAR: 1.02, EUR: 0.23 },
   };
 
   const currencyNames = {
     YER: "ريال يمني",
     USD: "دولار أمريكي",
     SAR: "ريال سعودي",
+    EUR: "يورو",
+    AED: "درهم إماراتي",
   };
 
   const convert = () => {
@@ -133,6 +137,18 @@ const CurrencyConverter = () => {
               <p className="text-md font-medium">💵 1 دولار أمريكي</p>
               <p className="text-xl font-bold text-indigo-600">
                 = 3.75 ريال سعودي
+              </p>
+            </div>
+            <div className="bg-white/80 rounded-xl p-4 shadow-sm">
+              <p className="text-md font-medium">💶 1 يورو</p>
+              <p className="text-xl font-bold text-indigo-600">
+                = 600 ريال يمني
+              </p>
+            </div>
+            <div className="bg-white/80 rounded-xl p-4 shadow-sm">
+              <p className="text-md font-medium">🇦🇪 1 درهم إماراتي</p>
+              <p className="text-xl font-bold text-indigo-600">
+                = 150 ريال يمني
               </p>
             </div>
           </div>
